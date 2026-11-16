@@ -14,3 +14,5 @@ Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 
 代码采用 GPL-3.0。参考音频和图标分别见 [来源说明](THIRD_PARTY_NOTICES.md)。本机已验证启动、输出界面和安装包解压，实际生成效果尚待试听。
 
 Windows 启动器会自动从 FLAC 恢复参考 WAV。直接运行源码前可执行 `python windows/restore_references.py`。
+
+[支持项目](https://ko-fi.com/little_wang)
