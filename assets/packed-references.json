@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "wav": "singing-reference.wav",
+      "flac": "singing-reference.flac",
+      "sha256": "983bae147d480cf17de486cc1a5c1bef121cb69a2a977a7f7900fbe48cadb39c",
+      "flac_sha256": "59c38971d36bde38cb271533222f1929fd0c3761b35fd34b3cf3e4544ec8b813",
+      "prefix": "UklGRv5zMABXQVZFZm10ICgAAAD+/wEARKwAAMwEAgADABgAFgAYAAQAAAABAAAAAAAQAIAAAKoAOJtxTElTVJoAAABJTkZPSUNNVHgAAABDcmVhdGUgdmlkZW9zIHdpdGggaHR0cHM6Ly9jbGlwY2hhbXAuY29tL2VuL3ZpZGVvLWVkaXRvciAtIGZyZWUgb25saW5lIHZpZGVvIGVkaXRvciwgdmlkZW8gY29tcHJlc3NvciwgdmlkZW8gY29udmVydGVyLgBJU0ZUDgAAAExhdmY2Mi4xMi4xMDIAZGF0YSBzMAA=",
+      "suffix": "",
+      "pcm_bytes": 3175200,
+      "raw_format": "s24le",
+      "pcm_codec": "pcm_s24le"
+    },
+    {
+      "wav": "speech-reference.wav",
+      "flac": "speech-reference.flac",
+      "sha256": "0a8efbeca1f0d4bbda6925b199376e6ec4a45dca4987c17a80f3700a1f776bbb",
+      "flac_sha256": "ab13c524bba656cd250735e712c98cacb77a029c1ecd921c1d30ee6dcbb7dd56",
+      "prefix": "UklGRq6bKwBXQVZFZm10ICgAAAD+/wEARKwAAMwEAgADABgAFgAYAAQAAAABAAAAAAAQAIAAAKoAOJtxTElTVJoAAABJTkZPSUNNVHgAAABDcmVhdGUgdmlkZW9zIHdpdGggaHR0cHM6Ly9jbGlwY2hhbXAuY29tL2VuL3ZpZGVvLWVkaXRvciAtIGZyZWUgb25saW5lIHZpZGVvIGVkaXRvciwgdmlkZW8gY29tcHJlc3NvciwgdmlkZW8gY29udmVydGVyLgBJU0ZUDgAAAExhdmY2Mi4xMi4xMDIAZGF0YdCaKwA=",
+      "suffix": "",
+      "pcm_bytes": 2857680,
+      "raw_format": "s24le",
+      "pcm_codec": "pcm_s24le"
+    }
+  ]
+}

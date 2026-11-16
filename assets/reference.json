@@ -1,0 +1,16 @@
+{
+  "source": "用户提供的邓小平在联合国大会上的讲话节选",
+  "event": "1974-04-10 联合国大会第六届特别会议",
+  "source_url": "https://webtv.un.org/zh/asset/k1o/k1oslp4ilo",
+  "source_sha256": "1628126743937a7de339c9d70fc28b6a4a2edad3202691fbf297d17fa5e62913",
+  "speech_excerpt_seconds": [
+    47.5,
+    69.1
+  ],
+  "singing_excerpt_seconds": [
+    70.0,
+    94.0
+  ],
+  "speech_transcript": "中国政府希望，会议将为加强发展中国家的团结，维护民族经济权益，为促进各国人民反对帝国主义、特别是霸权主义的斗争，作出积极的贡献。",
+  "processing": "Mono 44.1 kHz PCM24, 60 Hz high-pass, no pitch or speed change"
+}
