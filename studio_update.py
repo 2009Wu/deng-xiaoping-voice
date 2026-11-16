@@ -4,7 +4,7 @@ import argparse,hashlib,json,os,re,shutil,subprocess,time,urllib.request,uuid,zi
 from pathlib import Path,PurePosixPath
 from studio_paths import ROOT,PRODUCT,atomic_json,read_json,owned_path,sha256,file_lock
 
-ALLOWED={'2009Wu/custom-voice-studio','2009Wu/wang-hongwen-voice'}
+ALLOWED={'2009Wu/custom-voice-studio','2009Wu/wang-hongwen-voice','2009Wu/deng-xiaoping-voice'}
 LIMIT=30*1024**2
 AUTO_CHECK_INTERVAL = 6 * 60 * 60
 

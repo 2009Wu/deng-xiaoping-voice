@@ -46,7 +46,12 @@ def build_app(api):
         except Exception as error:raise gr.Error(str(error)) from error
 
     with gr.Blocks(title=PRODUCT['name'],delete_cache=(600,3600)) as demo:
-        gr.Markdown('# '+PRODUCT['name']+'\n'+('上传参考人声，再输入文字或放入歌曲。' if custom else '输入文字，或放入有原唱的音频／视频。')+'生成后会自动保存作品。')
+        with gr.Row(equal_height=False):
+            with gr.Column(min_width=240):
+                gr.Markdown('# '+PRODUCT['name']+'\n'+('上传参考人声，再输入文字或放入歌曲。' if custom else '输入文字，或放入有原唱的音频／视频。')+'生成后会自动保存作品。')
+            gr.Button('给小王买杯咖啡', link='https://ko-fi.com/little_wang',
+                      link_target='_blank', size='lg', scale=0, min_width=156,
+                      elem_id='support-project')
         with gr.Tab('生成作品'):
             with gr.Row(equal_height=False):
                 with gr.Column(scale=6):
@@ -103,9 +108,21 @@ def build_app(api):
                 redo_start=gr.Number(value=0,minimum=0,label='重做起点（秒）');redo_end=gr.Number(value=10,minimum=0,label='重做终点（秒）')
             redo=gr.Button('只重做这个区间（最多 120 秒）')
             retry=gr.Button('重试所选任务');history_full=gr.Button('用所选试听生成整首')
-        with gr.Tab('帮助'):
+        with gr.Tab('更新与帮助'):
             gr.Markdown(f'当前版本 **{PRODUCT["version"]}**\n\n作品目录：`{EXPORTS}`\n\n本机共用模型缓存：`{SHARED_CACHE}`。作品记录单独保存。')
             gr.Markdown('参考音色取自 1974 年 4 月 10 日联合国大会讲话。')
+            from studio_update import automatic_updates_enabled, set_automatic_updates
+            automatic = gr.Checkbox(
+                label='启动时自动更新', value=automatic_updates_enabled(),
+                info='打开工作室时检查并安装新版，然后进入网页。离线时会继续打开当前版本。',
+                visible=bool(os.getenv('VOICE_LAUNCHER_PID')),
+            )
+            update_info=gr.Textbox(label='更新状态',value=(read_json(ROOT/'.runtime/update-result.json') or {}).get('message','可手动检查更新。'),interactive=False)
+            with gr.Row():
+                check=gr.Button('检查更新');download=gr.Button('下载并校验新版')
+                install=gr.Button('安装已下载更新并重启');rollback=gr.Button('回退到上一个版本')
+            staged=gr.State(None)
+            gr.Markdown('更新前先停止生成。安装和回退会关闭并重新打开工作室，作品、收藏音色和模型不受影响。回退后，自动更新会等待更高版本。')
             diagnose=gr.Button('导出诊断报告');report=gr.File(label='诊断报告（不含录音、输入文字和作品）',interactive=False)
             gr.Markdown('显存不足：关闭其他显卡程序，选择“6 GB 节省显存”。下载失败：检查网络后重试，保留已有缓存。无法启动：在启动器点击“修复安装”。')
         gr.Markdown('所有输出均为 AI 合成，不能作为本人真实录音。素材与生成均在本机处理。')
@@ -182,6 +199,29 @@ def build_app(api):
                 try:delete_voice(identifier);return gr.update(choices=voice_choices(),value=None),None,'已移除收藏；原始素材和已有作品仍然保留。'
                 except Exception as error:raise gr.Error(str(error)) from error
             remove.click(remove_voice,[favorite],[favorite,selected_ref,ref_hint],api_name=False)
+        from studio_update import check_update,stage_update,request_update
+        def update_check():
+            try:
+                result=check_update();return ('可更新到 '+result['tag']) if result['available'] else '当前已是最新发布版本。'
+            except Exception as error:return '检查失败：'+str(error)[:250]
+        def update_download():
+            try:
+                path=stage_update();return path,'新版已下载并通过校验，点击安装后会重启。' if path else '当前已是最新发布版本。'
+            except Exception as error:return None,'下载失败：'+str(error)[:250]
+        def update_install(path):
+            try:return request_update(path)
+            except Exception as error:raise gr.Error(str(error)) from error
+        def update_rollback():
+            try:return request_update(rollback=True)
+            except Exception as error:raise gr.Error(str(error)) from error
+        def save_automatic_update(enabled):
+            set_automatic_updates(enabled)
+            return '已开启自动更新，下次打开工作室时生效。' if enabled else '已关闭自动更新。'
+        automatic.input(save_automatic_update, inputs=automatic, outputs=update_info, api_name=False, queue=False)
+        check.click(update_check,outputs=update_info,api_name=False)
+        download.click(update_download,outputs=[staged,update_info],api_name=False)
+        install.click(update_install,[staged],update_info,api_name=False,queue=False)
+        rollback.click(update_rollback,outputs=update_info,api_name=False,queue=False)
         from studio_diagnostics import export_report
         diagnose.click(export_report,outputs=report,api_name=False)
         # Original endpoints retain their exact positional inputs and outputs.

@@ -1,8 +1,8 @@
 {
   "id": "deng-xiaoping-voice",
   "name": "邓小平语音工作室",
-  "version": "0.1.0",
-  "repository": null,
+  "version": "0.1.1",
+  "repository": "2009Wu/deng-xiaoping-voice",
   "launcher": "Start Deng Voice Studio.exe",
   "asset": "Deng-Xiaoping-Voice-Studio-Windows.zip"
 }

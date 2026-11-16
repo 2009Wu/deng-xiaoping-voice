@@ -1,4 +1,4 @@
-﻿// SPDX-License-Identifier: GPL-3.0-only
+// SPDX-License-Identifier: GPL-3.0-only
 // Build using the .NET Framework C# compiler; no third-party GUI runtime required.
 using System;
 using System.Collections.Generic;
@@ -543,7 +543,8 @@ internal sealed class LauncherForm : Form {
         try {
             await Task.Run(() => {
                 if (setup) engine.Setup(cancel.Token);
-                server = engine.StartServer(7886, cancel.Token);
+                if (!engine.PrepareAutomaticUpdate(cancel.Token))
+                    server = engine.StartServer(7886, cancel.Token);
             });
             if (server != null && !server.HasExited) OpenApp();
         } catch (OperationCanceledException) { errorMessage = "已停止，之后可以重新开始安装。"; }

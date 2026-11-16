@@ -1,6 +1,8 @@
-# 邓小平语音工作室 v0.1.0
+# 邓小平语音工作室 v0.1.1
 
-[下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/download/v0.1.0/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
+[下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/latest/download/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
+
+Windows 启动时会自动检查更新，可在「更新与帮助」中关闭。v0.1.0 用户需先下载新版 ZIP。
 
 Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 30 GB 空间。
 
@@ -15,4 +17,4 @@ Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 
 
 Windows 启动器会自动从 FLAC 恢复参考 WAV。直接运行源码前可执行 `python windows/restore_references.py`。
 
-[支持项目](https://ko-fi.com/little_wang)
+[给小王买杯咖啡](https://ko-fi.com/little_wang)
