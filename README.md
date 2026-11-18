@@ -4,7 +4,9 @@
 
 [下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/latest/download/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
 
-当前 Windows 版 **v0.2.4**。[版本说明](docs/releases/v0.2.4.md)
+当前 Windows 版 **v0.2.5**。[版本说明](docs/releases/v0.2.5.md)
+
+安装更新后，缺少的桌面快捷方式会自动补建。已有快捷方式会沿用，图标变更时会更新原图标。
 
 双击桌面图标进入工作室。安装界面在工作室打开后会自动收起，关闭工作室会结束后台服务。
 
