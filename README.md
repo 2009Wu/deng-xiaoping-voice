@@ -22,3 +22,7 @@ Windows 启动器会自动从 FLAC 恢复参考 WAV。直接运行源码前可�
 [给小王买杯咖啡](https://ko-fi.com/little_wang)
 
 ![新版生成界面](docs/studio-preview.jpg)
+
+## 提交反馈
+
+欢迎分享功能建议、程序问题，以及配音或翻唱质量上的意见。[打开反馈表单](https://github.com/2009Wu/custom-voice-studio/issues/new?template=studio-feedback.yml)（需登录 GitHub，内容公开）。

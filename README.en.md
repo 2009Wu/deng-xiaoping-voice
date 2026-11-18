@@ -7,3 +7,7 @@ Local Windows text-to-speech and song voice conversion. Extract the full ZIP, th
 The Windows launcher checks for updates automatically. Users on v0.1.0 need to download the new ZIP once.
 
 [Buy Xiao Wang a coffee](https://ko-fi.com/little_wang)
+
+## Feedback
+
+Share feature ideas, bugs, or feedback about speech and singing quality. [Open the public feedback form](https://github.com/2009Wu/custom-voice-studio/issues/new?template=studio-feedback.yml) (GitHub sign-in required).
