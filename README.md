@@ -1,4 +1,6 @@
-# 邓小平语音工作室 v0.1.1
+# 邓小平语音工作室 v0.2.0
+
+蓝白版式，文字与歌曲入口并排，播放器和导出集中在下方。 右上角语言菜单列出全球使用人数最多的 20 种语言，普通话可选简体或繁体。切换语言会保留草稿。
 
 [下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/latest/download/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
 
@@ -18,3 +20,5 @@ Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 
 Windows 启动器会自动从 FLAC 恢复参考 WAV。直接运行源码前可执行 `python windows/restore_references.py`。
 
 [给小王买杯咖啡](https://ko-fi.com/little_wang)
+
+![新版生成界面](docs/studio-preview.jpg)
