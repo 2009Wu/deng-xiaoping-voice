@@ -1,6 +1,6 @@
 # Deng Xiaoping Voice Studio
 
-**Windows v0.2.5** · [Release notes](docs/releases/v0.2.5.md)
+**Windows v0.2.6** · [Release notes](docs/releases/v0.2.6.md)
 
 Open the studio from its desktop shortcut. The app checks for updates at startup and can install them in one click.
 
@@ -15,3 +15,8 @@ The Windows launcher checks for updates automatically. Users on v0.1.0 need to d
 ## Feedback
 
 Share feature ideas, bugs, or feedback about speech and singing quality. [Open the public feedback form](https://github.com/2009Wu/custom-voice-studio/issues/new?template=studio-feedback.yml) (GitHub sign-in required).
+
+
+## Optional usage statistics
+
+Usage statistics are off by default. Use `Analytics Preferences.cmd` in the installation folder to opt in or opt out. Reports count generation, first export clicks, and B-version adoption. They contain coarse settings and IDs of cataloged public songs. Audio and text remain on the device.
