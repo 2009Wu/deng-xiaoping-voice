@@ -4,11 +4,11 @@
 
 [下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/latest/download/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
 
-当前 Windows 版 **v0.2.2**。[版本说明](docs/releases/v0.2.2.md)
+当前 Windows 版 **v0.2.3**。[版本说明](docs/releases/v0.2.3.md)
 
 双击桌面图标进入工作室。安装界面在工作室打开后会自动收起，关闭工作室会结束后台服务。
 
-启动时自动检查更新。有新版时，右下角会提醒，版本下方也会显示更新内容。点击「安装更新并重启」即可完成升级。
+启动时自动检查更新。有新版时，右下角会提醒，版本下方也会显示更新内容。在「更新与帮助」的版本下方或右下角提醒里，点击「安装更新并重启」即可完成升级。
 
 Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 30 GB 空间。
 
