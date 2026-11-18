@@ -34,3 +34,7 @@ Pinned model revision identifiers and model-card license metadata are in `models
 The application icon is converted from a user-supplied photograph. The photograph is separate from the GPL software license; no additional image rights are asserted by this project. Original file: assets/icon-source.jpg.
 
 The bundled reference excerpts are taken from the supplied archival recording of Deng Xiaoping’s 1974 UN address. They and the icon are separate from the software license. See assets/reference.json for the source and excerpt times.
+
+## Microsoft WebView2
+
+The Windows desktop interface uses the Microsoft WebView2 SDK. The SDK redistribution license and third-party notices are included in [windows/webview2](windows/webview2). The updater installs the studio files, and the desktop window uses the WebView2 Runtime available on Windows.

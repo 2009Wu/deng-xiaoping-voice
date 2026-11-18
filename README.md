@@ -1,17 +1,21 @@
-# 邓小平语音工作室 v0.2.0
+# 邓小平语音工作室
 
 蓝白版式，文字与歌曲入口并排，播放器和导出集中在下方。 右上角语言菜单列出全球使用人数最多的 20 种语言，普通话可选简体或繁体。切换语言会保留草稿。
 
 [下载 Windows 安装包](https://github.com/2009Wu/deng-xiaoping-voice/releases/latest/download/Deng-Xiaoping-Voice-Studio-Windows.zip) · [Hugging Face 项目页](https://huggingface.co/spaces/Little-Wang/deng-xiaoping-voice)
 
-Windows 启动时会自动检查更新，可在「更新与帮助」中关闭。v0.1.0 用户需先下载新版 ZIP。
+当前 Windows 版 **v0.2.2**。[版本说明](docs/releases/v0.2.2.md)
+
+双击桌面图标进入工作室。安装界面在工作室打开后会自动收起，关闭工作室会结束后台服务。
+
+启动时自动检查更新。有新版时，右下角会提醒，版本下方也会显示更新内容。点击「安装更新并重启」即可完成升级。
 
 Windows 10 / 11，NVIDIA 显卡，建议至少 6 GB 显存。首次安装预留 30 GB 空间。
 
 1. 完整解压安装包，双击 Start Deng Voice Studio.exe。
-2. 首次点击“安装并打开工作室”。依赖和模型下载完成后，工作室在浏览器中打开。
+2. 首次点击“安装并打开工作室”。依赖和模型下载完成后，工作室窗口会自动打开。
 3. 输入文字或上传有原唱的音频／视频，点击“一键生成”。也可先试听一小段歌曲。
-4. 生成结果自动保存到“文档 / Voice Studio作品 / 邓小平语音工作室”。使用期间保持启动器开启。
+4. 生成结果自动保存到“文档 / Voice Studio作品 / 邓小平语音工作室”。
 
 固定音色参考来自 1974 年联合国大会讲话。所有生成结果均为 AI 合成。
 
