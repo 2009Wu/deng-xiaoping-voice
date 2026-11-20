@@ -22,6 +22,10 @@ Share feature ideas, bugs, or feedback about speech and singing quality. [Open t
 Usage statistics are off by default. Use `Analytics Preferences.cmd` in the installation folder to opt in or opt out. Reports count generation, first export clicks, and B-version adoption. They contain coarse settings and IDs of cataloged public songs. Audio and text remain on the device.
 
 
+## What’s new · v0.2.8
+
+Fixes the FFmpeg download at 12% of Windows setup. Failures identify the dependency and HTTP status. Verified downloads are reused.
+
 ## What’s new · v0.2.7
 
 - The desktop window opens while the local service and interface load.
